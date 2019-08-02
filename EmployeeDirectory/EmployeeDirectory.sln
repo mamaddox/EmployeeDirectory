@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDirectory.UI", "Emp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDirectory.WebAPI", "EmployeeDirectory.WebAPI\EmployeeDirectory.WebAPI.csproj", "{13A4CC70-E882-4C43-95C0-022AC1C7709C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDirectory.Directory.Tests", "EmployeeDirectory.Directory.Tests\EmployeeDirectory.Directory.Tests.csproj", "{A6EDBC0D-950C-433B-8B5E-122032641A2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -31,5 +33,9 @@ Global
 		{13A4CC70-E882-4C43-95C0-022AC1C7709C}.Debug|x86.Build.0 = Debug|Any CPU
 		{13A4CC70-E882-4C43-95C0-022AC1C7709C}.Release|x86.ActiveCfg = Release|Any CPU
 		{13A4CC70-E882-4C43-95C0-022AC1C7709C}.Release|x86.Build.0 = Release|Any CPU
+		{A6EDBC0D-950C-433B-8B5E-122032641A2B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A6EDBC0D-950C-433B-8B5E-122032641A2B}.Debug|x86.Build.0 = Debug|Any CPU
+		{A6EDBC0D-950C-433B-8B5E-122032641A2B}.Release|x86.ActiveCfg = Release|Any CPU
+		{A6EDBC0D-950C-433B-8B5E-122032641A2B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
