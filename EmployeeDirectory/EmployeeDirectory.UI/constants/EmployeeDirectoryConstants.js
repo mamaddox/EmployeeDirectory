@@ -1,0 +1,5 @@
+﻿EmployeeDirectoryConstants = {
+    apiUrl: "",
+
+    fields: []
+};
