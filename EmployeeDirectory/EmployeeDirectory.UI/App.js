@@ -1,5 +1,34 @@
 ﻿class App extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			fields: []
+		};
+	}
+
+	componentDidMount() {
+		this.getFields();
+	}
+
+	getFields = () => {
+		//EmployeeAPI.getFields(this.setFields);
+		this.setFields(EmployeeDirectoryConstants.Fields);
+	}
+
+	setFields = fields => {
+		this.setState({fields: fields});
+	}
+
     render() {
-        return(<h1>Hello World!</h1>);
+        return(
+			<div className="jumbotron bg-white d-flex align-items-center">
+				<div className="container text-center">
+					<h1>Employee Directory</h1>
+					{this.state.fields.length !== 0 && 
+						<SearchForm 
+		        			fields={this.state.fields}/>}
+				</div>
+			</div>
+    	);
     }
 }

@@ -65,10 +65,11 @@
     <Content Include="api\AttributeAPI.js" />
     <Content Include="components\Table\Row.js" />
     <Content Include="components\Table\Table.js" />
-    <Content Include="components\Table\Pagination.js" />
     <Content Include="components\SearchForm.js" />
     <Content Include="components\SearchInput.js" />
     <Content Include="packages.config" />
+    <Content Include="components\Pagination.js" />
+    <Content Include="components\Table\Cell.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
