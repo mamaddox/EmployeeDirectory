@@ -1,8 +1,8 @@
 ﻿EmployeeAPI = {};
 
-EmployeeAPI.getFields = function(callback) {
+EmployeeAPI.getAttributes = function(callback) {
 	$.ajax({
-		url: EmployeeDirectoryConstants.ApiUrl + "api/Fields",
+		url: EmployeeDirectoryConstants.ApiUrl + "api/EmployeeAttributes",
 		type: "GET",
 		success: function(data) {
 			callback(data);

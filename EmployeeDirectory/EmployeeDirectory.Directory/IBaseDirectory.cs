@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using EmployeeDirectory.Entities;
+using EmployeeDirectory.Entities.Attributes;
 
 namespace EmployeeDirectory.Directory
 {

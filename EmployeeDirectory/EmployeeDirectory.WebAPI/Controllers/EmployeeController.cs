@@ -1,15 +1,15 @@
 ﻿using System.Web.Http;
-using EmployeeDirectory.Entities;
+using EmployeeDirectory.Entities.Attributes;
 
 namespace EmployeeDirectory.WebAPI.Controllers
 {
     public class EmployeeController : BaseController
     {
-        [Route("api/Fields")]
+        [Route("api/EmployeeAttributes")]
         [HttpGet]
-        public IHttpActionResult GetFields()
+        public IHttpActionResult GetEmployeeEntityAttributes()
         {
-            return Json(new AttributeGetter<EmployeeEntity>().Fields);
+            return Json(new AttributeGetter<EmployeeEntity>());
         }
     }
 }

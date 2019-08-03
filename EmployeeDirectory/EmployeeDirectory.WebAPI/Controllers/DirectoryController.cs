@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 using EmployeeDirectory.Directory;
-using EmployeeDirectory.Entities;
+using EmployeeDirectory.Entities.Attributes;
 
 namespace EmployeeDirectory.WebAPI.Controllers
 {

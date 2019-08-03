@@ -22,10 +22,10 @@
 		return(
 			<div>
 				<SearchInput 
-					fields={this.props.fields}/>
+					fields={this.props.attributes.Fields}/>
 				{this.state.rows.length !== 0 &&
 					<Table 
-						fields={this.props.fields}
+						attributes={this.props.attributes}
 						rows={this.state.rows} />
 				}
 				<Pagination />

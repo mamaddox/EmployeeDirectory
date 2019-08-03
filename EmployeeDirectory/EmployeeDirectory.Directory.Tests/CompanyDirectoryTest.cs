@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using EmployeeDirectory.Entities;
+using EmployeeDirectory.Entities.Attributes;
 using NUnit.Framework;
 
 namespace EmployeeDirectory.Directory.Tests

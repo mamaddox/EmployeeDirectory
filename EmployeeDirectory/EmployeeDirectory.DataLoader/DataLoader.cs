@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web.Http;
-using EmployeeDirectory.Entities;
+using EmployeeDirectory.Entities.Attributes;
 using Newtonsoft.Json;
 
 namespace EmployeeDirectory.Data

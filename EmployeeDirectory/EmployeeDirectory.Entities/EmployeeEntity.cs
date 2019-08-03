@@ -1,10 +1,11 @@
 ﻿using Newtonsoft.Json;
 
-namespace EmployeeDirectory.Entities
+namespace EmployeeDirectory.Entities.Attributes
 {
     public class EmployeeEntity : IEmployeeEntity
     {
         [JsonProperty("Id")]
+        [FieldType(IsHidden = true)]
         public int Id { get; set; }
 
         [JsonProperty("First Name")]
@@ -23,6 +24,7 @@ namespace EmployeeDirectory.Entities
         public string Location { get; set; }
 
         [JsonProperty("Picture")]
+        [FieldType(IsHidden = true, IsPicture = true)]
         public string Picture { get; set; }
     }
 }

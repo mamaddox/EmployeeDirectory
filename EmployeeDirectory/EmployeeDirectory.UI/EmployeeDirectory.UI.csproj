@@ -62,7 +62,6 @@
     <Content Include="constants\EmployeeDirectoryConstants.js" />
     <Content Include="api\EmployeeAPI.js" />
     <Content Include="api\DirectoryAPI.js" />
-    <Content Include="api\AttributeAPI.js" />
     <Content Include="components\Table\Row.js" />
     <Content Include="components\Table\Table.js" />
     <Content Include="components\SearchForm.js" />
@@ -70,6 +69,7 @@
     <Content Include="packages.config" />
     <Content Include="components\Pagination.js" />
     <Content Include="components\Table\Cell.js" />
+    <Content Include="components\Modal\Modal.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -82,6 +82,7 @@
     <Folder Include="components\" />
     <Folder Include="constants\" />
     <Folder Include="components\Table\" />
+    <Folder Include="components\Modal\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

@@ -1,13 +1,17 @@
 ﻿class Row extends React.Component {
+	handleClick = () => {
+		alert("Test");
+	}
+	
 	render() {
 		const row = this.props.rowObj;
 		return (
-			<tr>
-				{Object.keys(row).map((key, i) => {
+			<tr onClick={this.handleClick}>
+				{this.props.visibleFields.map((field, i) => {
 					return (
 						<Cell 
 							key={i}
-							value={row[key]}/>
+							value={row[field]}/>
 						);
 				})}
 		    </tr>

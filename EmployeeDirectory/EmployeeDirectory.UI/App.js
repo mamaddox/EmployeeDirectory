@@ -2,7 +2,7 @@
 	constructor() {
 		super();
 		this.state = {
-			fields: []
+			attributes: {}
 		};
 	}
 
@@ -11,11 +11,11 @@
 	}
 
 	getFields = () => {
-		EmployeeAPI.getFields(this.setFields);
+		EmployeeAPI.getAttributes(this.setAttributes);
 	}
 
-	setFields = fields => {
-		this.setState({fields: fields});
+	setAttributes = attributes => {
+		this.setState({attributes: attributes})
 	}
 
     render() {
@@ -23,9 +23,9 @@
 			<div className="jumbotron bg-white d-flex align-items-center">
 				<div className="container text-center">
 					<h1>Employee Directory</h1>
-					{this.state.fields.length !== 0 && 
-						<SearchForm 
-		        			fields={this.state.fields}
+					{Object.keys(this.state.attributes).length !== 0 && 
+						<SearchForm
+							attributes={this.state.attributes} 
 		        			getData={DirectoryAPI.getEmployees} />
 	        		}
 				</div>

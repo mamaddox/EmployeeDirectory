@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using EmployeeDirectory.Data;
-using EmployeeDirectory.Entities;
+using EmployeeDirectory.Entities.Attributes;
 
 namespace EmployeeDirectory.Directory
 {
