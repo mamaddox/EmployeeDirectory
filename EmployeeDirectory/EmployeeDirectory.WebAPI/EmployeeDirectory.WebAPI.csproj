@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>EmployeeDirectory.WebAPI</RootNamespace>
     <AssemblyName>EmployeeDirectory.WebAPI</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -76,6 +76,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeeDirectory.Directory\EmployeeDirectory.Directory.csproj">
+      <Project>{924EC90D-4203-4DFA-915C-DD643F4F1806}</Project>
+      <Name>EmployeeDirectory.Directory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeDirectory.Entities\EmployeeDirectory.Entities.csproj">
+      <Project>{1F589146-A640-4389-A594-575FF9B7D7B4}</Project>
+      <Name>EmployeeDirectory.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
