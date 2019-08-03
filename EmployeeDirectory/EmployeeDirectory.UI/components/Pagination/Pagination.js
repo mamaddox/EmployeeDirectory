@@ -1,4 +1,9 @@
 ﻿class Pagination extends React.Component {
+	setCurrentPage = page => {
+		if (this.props.currentPage !== page)
+			this.props.updateCurrentPage(page);
+	}
+
 	setNextPage = () => {
 		if (this.props.currentPage !== this.props.maxPage)
 			this.props.updateCurrentPage(this.props.currentPage + 1);
@@ -25,7 +30,7 @@
 						<span className="page-link">Previous</span>
 					</li>
 					{this.getPageNumbers().map((page, i) => {
-						return (<li className={"page-item " + (page === this.props.currentPage ? "active" : "")} key={i}>
+						return (<li className={"page-item " + (page === this.props.currentPage ? "active" : "")} key={i} onClick={() => this.setCurrentPage(page)}>
 								<a className="page-link" href="#">{page}</a>
 							</li>);
 					})}
