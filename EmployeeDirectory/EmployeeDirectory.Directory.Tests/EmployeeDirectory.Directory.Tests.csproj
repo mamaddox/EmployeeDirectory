@@ -31,7 +31,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompanyDirectoryTest.cs" />
+    <Compile Include="DirectoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

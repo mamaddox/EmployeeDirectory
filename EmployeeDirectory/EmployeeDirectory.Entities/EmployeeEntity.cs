@@ -1,6 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using EmployeeDirectory.Entities.Attributes;
+using Newtonsoft.Json;
 
-namespace EmployeeDirectory.Entities.Attributes
+namespace EmployeeDirectory.Entities
 {
     public class EmployeeEntity : IEmployeeEntity
     {

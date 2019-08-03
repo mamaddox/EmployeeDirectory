@@ -1,4 +1,4 @@
-﻿namespace EmployeeDirectory.Entities.Attributes
+﻿namespace EmployeeDirectory.Entities
 {
     public interface IEmployeeEntity : IEntity
     {

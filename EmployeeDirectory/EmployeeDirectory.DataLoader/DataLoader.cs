@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using EmployeeDirectory.Entities;
 using EmployeeDirectory.Entities.Attributes;
 using Newtonsoft.Json;
 
@@ -11,6 +12,7 @@ namespace EmployeeDirectory.Data
 {
     public static class DataLoader
     {
+        //This api returns an array or 50 people
         private const string employeesUrl = "https://my.api.mockaroo.com/users.json?key=13b96c70";
 
         public static IEnumerable<EmployeeEntity> GetEmployees()
