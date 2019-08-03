@@ -1,8 +1,8 @@
 ﻿class Row extends React.Component {
 	handleClick = () => {
-		alert("Test");
+		this.props.onRowClick(this.props.rowObj);
 	}
-	
+
 	render() {
 		const row = this.props.rowObj;
 		return (
