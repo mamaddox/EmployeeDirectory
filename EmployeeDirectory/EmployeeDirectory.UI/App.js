@@ -11,8 +11,7 @@
 	}
 
 	getFields = () => {
-		//EmployeeAPI.getFields(this.setFields);
-		this.setFields(EmployeeDirectoryConstants.Fields);
+		EmployeeAPI.getFields(this.setFields);
 	}
 
 	setFields = fields => {
@@ -26,7 +25,9 @@
 					<h1>Employee Directory</h1>
 					{this.state.fields.length !== 0 && 
 						<SearchForm 
-		        			fields={this.state.fields}/>}
+		        			fields={this.state.fields}
+		        			getData={DirectoryAPI.getEmployees} />
+	        		}
 				</div>
 			</div>
     	);

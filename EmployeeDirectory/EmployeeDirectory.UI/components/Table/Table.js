@@ -10,11 +10,11 @@
 					</tr>
 				</thead>
 				<tbody>
-					{this.props.fields.map((x, i) => {
+					{this.props.rows.map((row, i) => {
 						return (
 							<Row 
 								key={i}
-								rowValues={this.props.fields}/>
+								rowObj={row}/>
 							);
 						}
 					)}

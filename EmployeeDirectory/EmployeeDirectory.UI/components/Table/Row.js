@@ -1,12 +1,13 @@
 ﻿class Row extends React.Component {
 	render() {
+		const row = this.props.rowObj;
 		return (
 			<tr>
-				{this.props.rowValues.map((value, i) => {
+				{Object.keys(row).map((key, i) => {
 					return (
 						<Cell 
 							key={i}
-							value={value}/>
+							value={row[key]}/>
 						);
 				})}
 		    </tr>
