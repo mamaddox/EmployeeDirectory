@@ -2,7 +2,11 @@
 	constructor() {
 		super();
 		this.state = {
-			rows: []
+			rows: [],
+			visibleRows: [],
+			rowCount: EmployeeDirectoryConstants.DefaultRowCount,
+			currentPage: 1,
+			numberOfRows: 0
 		};
 	}
 
@@ -15,7 +19,23 @@
 	}
 
 	setRows = rows => {
-		this.setState({rows: rows});
+		this.setState({rows: rows, numberOfRows: rows.length}, this.updateVisibleRows);
+	}
+
+	updateVisibleRows = () => {
+		const currentPage = this.state.currentPage;
+		const rowCount = this.state.rowCount;
+		const rows = this.state.rows;
+		let visibleRows = rows.slice(currentPage * rowCount - rowCount + 1, currentPage * rowCount + 1);
+		this.setState({visibleRows: visibleRows});
+	}
+
+	updateRowCount = rowCount => {
+		this.setState({rowCount: rowCount}, this.updateVisibleRows);
+	}
+
+	updateCurrentPage = page => {
+		this.setState({currentPage: page}, this.updateVisibleRows);
 	}
 
 	render() {
@@ -23,12 +43,18 @@
 			<div>
 				<SearchInput 
 					fields={this.props.attributes.Fields}/>
-				{this.state.rows.length !== 0 &&
+				{this.state.numberOfRows !== 0 &&
 					<Table 
 						attributes={this.props.attributes}
-						rows={this.state.rows} />
+						rows={this.state.visibleRows} />
 				}
-				<Pagination />
+				<PaginationWrapper 
+					rowCount={this.state.rowCount}
+					currentPage={this.state.currentPage}
+					maxPage={Math.ceil(this.state.numberOfRows / this.state.rowCount)}
+					numberOfRows={this.state.numberOfRows}
+					updateRowCount={this.updateRowCount}
+					updateCurrentPage={this.updateCurrentPage} />
 			</div>
 		);
 	}
