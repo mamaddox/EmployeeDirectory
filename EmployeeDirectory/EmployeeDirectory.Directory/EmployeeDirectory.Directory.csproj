@@ -27,12 +27,22 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Compile Include="CompanyDirectory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IBaseDirectory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Directory.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataLoader.cs" />
+    <ProjectReference Include="..\EmployeeDirectory.Entities\EmployeeDirectory.Entities.csproj">
+      <Project>{1F589146-A640-4389-A594-575FF9B7D7B4}</Project>
+      <Name>EmployeeDirectory.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeDirectory.DataLoader\EmployeeDirectory.Data.csproj">
+      <Project>{A2FFA7CF-867B-420F-B094-757418C3FD35}</Project>
+      <Name>EmployeeDirectory.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

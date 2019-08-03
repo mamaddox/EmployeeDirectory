@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D187C52C-2374-44AE-8C13-01C8AA4120BD}</ProjectGuid>
+    <ProjectGuid>{A2FFA7CF-867B-420F-B094-757418C3FD35}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>EmployeeDirectory.Directory.Tests</RootNamespace>
-    <AssemblyName>EmployeeDirectory.Directory.Tests</AssemblyName>
+    <RootNamespace>EmployeeDirectory.DataLoader</RootNamespace>
+    <AssemblyName>EmployeeDirectory.DataLoader</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,34 +17,35 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompanyDirectoryTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="DataLoader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EmployeeDirectory.Entities\EmployeeDirectory.Entities.csproj">
       <Project>{1F589146-A640-4389-A594-575FF9B7D7B4}</Project>
       <Name>EmployeeDirectory.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EmployeeDirectory.Directory\EmployeeDirectory.Directory.csproj">
-      <Project>{924EC90D-4203-4DFA-915C-DD643F4F1806}</Project>
-      <Name>EmployeeDirectory.Directory</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
