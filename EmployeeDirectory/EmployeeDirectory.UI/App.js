@@ -26,7 +26,8 @@
 					{Object.keys(this.state.attributes).length !== 0 && 
 						<SearchForm
 							attributes={this.state.attributes} 
-		        			getData={DirectoryAPI.getEmployees} />
+		        			getData={DirectoryAPI.getEmployees}
+		        			handleSearch={DirectoryAPI.getBySearchParameters}/>
 	        		}
 				</div>
 			</div>

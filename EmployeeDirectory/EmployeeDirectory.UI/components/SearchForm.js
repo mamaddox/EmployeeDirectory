@@ -38,11 +38,16 @@
 		this.setState({currentPage: page}, this.updateVisibleRows);
 	}
 
+	handleSearch = searchParameters => {
+		this.props.handleSearch(searchParameters, this.setRows);
+	}
+
 	render() {
 		return(
 			<div>
 				<SearchInput 
-					fields={this.props.attributes.Fields}/>
+					attributes={this.props.attributes}
+					handleSearch={this.handleSearch} />
 				{this.state.numberOfRows !== 0 &&
 					<Table 
 						attributes={this.props.attributes}

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using EmployeeDirectory.Entities;
 
 namespace EmployeeDirectory.Directory
@@ -8,7 +7,7 @@ namespace EmployeeDirectory.Directory
         where TEntity : IEntity
     {
         IEnumerable<TEntity> GetAll();
-        IEnumerable<TEntity> Search(Tuple<string, string> searchParameter);
+        IEnumerable<TEntity> Search(SearchParameterEntity searchParameter);
         void Add(TEntity entity);
     }
 }

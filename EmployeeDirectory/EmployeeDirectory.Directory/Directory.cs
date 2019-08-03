@@ -35,13 +35,13 @@ namespace EmployeeDirectory.Directory
             employees.Add(employee);
         }
 
-        public IEnumerable<EmployeeEntity> Search(Tuple<string,string> searchParameter)
+        public IEnumerable<EmployeeEntity> Search(SearchParameterEntity searchParameter)
         {
             if (searchParameter == null)
                 throw new ArgumentNullException();
 
-            var field = searchParameter.Item1;
-            var value = searchParameter.Item2;
+            var field = searchParameter.Field;
+            var value = searchParameter.Value;
 
             var results = new HashSet<EmployeeEntity>();
 

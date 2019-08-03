@@ -39,6 +39,7 @@
     <Compile Include="EmployeeEntity.cs" />
     <Compile Include="Attributes\AttributeGetter.cs" />
     <Compile Include="Attributes\FieldTypeAttribute.cs" />
+    <Compile Include="SearchParameterEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

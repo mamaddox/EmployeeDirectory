@@ -61,7 +61,7 @@ namespace EmployeeDirectory.Directory.Tests
         [Test]
         public void Search_GivenEntityWithAllFields_ShouldReturnFilteredResults()
         {
-            var searchParameter = new Tuple<string, string>("", "Tes");
+            var searchParameter = new SearchParameterEntity("", "Tes");
 
             var searchResults = directory.Search(searchParameter).ToList();
 
@@ -71,7 +71,7 @@ namespace EmployeeDirectory.Directory.Tests
         [Test]
         public void Search_GivenEntityWithSpecificFields_ShouldReturnFilteredResults()
         {
-            var searchParameter = new Tuple<string, string>("Department", "Test");
+            var searchParameter = new SearchParameterEntity("Department", "Test");
 
             var searchResults = directory.Search(searchParameter).ToList();
 
