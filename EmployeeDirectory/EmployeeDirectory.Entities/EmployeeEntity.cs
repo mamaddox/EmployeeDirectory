@@ -7,8 +7,11 @@ namespace EmployeeDirectory.Entities
         [JsonProperty("Id")]
         public int Id { get; set; }
 
-        [JsonProperty("Name")]
-        public string Name { get; set; }
+        [JsonProperty("First Name")]
+        public string FirstName { get; set; }
+
+        [JsonProperty("Last Name")]
+        public string LastName { get; set; }
 
         [JsonProperty("Title")]
         public string Title { get; set; }
@@ -19,7 +22,7 @@ namespace EmployeeDirectory.Entities
         [JsonProperty("Location")]
         public string Location { get; set; }
 
-        //[JsonProperty("Picture")]
-        //public string PictureUrl { get; set; }
+        [JsonProperty("Picture")]
+        public string Picture { get; set; }
     }
 }

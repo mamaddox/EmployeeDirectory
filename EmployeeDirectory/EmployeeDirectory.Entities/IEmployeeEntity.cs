@@ -2,7 +2,8 @@
 {
     public interface IEmployeeEntity : IEntity
     {
-        string Name { get; set; }
+        string FirstName { get; set; }
+        string LastName { get; set; }
         string Title { get; set; }
         string Department { get; set; }
     }

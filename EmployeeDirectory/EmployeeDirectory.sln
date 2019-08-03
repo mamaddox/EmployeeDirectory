@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDirectory.UI", "Emp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDirectory.WebAPI", "EmployeeDirectory.WebAPI\EmployeeDirectory.WebAPI.csproj", "{13A4CC70-E882-4C43-95C0-022AC1C7709C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDirectory.Directory.Tests", "EmployeeDirectory.Directory.Tests\EmployeeDirectory.Directory.Tests.csproj", "{A6EDBC0D-950C-433B-8B5E-122032641A2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDirectory.Data", "EmployeeDirectory.DataLoader\EmployeeDirectory.Data.csproj", "{A2FFA7CF-867B-420F-B094-757418C3FD35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDirectory.Directory.Tests", "EmployeeDirectory.Directory.Tests\EmployeeDirectory.Directory.Tests.csproj", "{D187C52C-2374-44AE-8C13-01C8AA4120BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +35,13 @@ Global
 		{13A4CC70-E882-4C43-95C0-022AC1C7709C}.Debug|x86.Build.0 = Debug|Any CPU
 		{13A4CC70-E882-4C43-95C0-022AC1C7709C}.Release|x86.ActiveCfg = Release|Any CPU
 		{13A4CC70-E882-4C43-95C0-022AC1C7709C}.Release|x86.Build.0 = Release|Any CPU
-		{A6EDBC0D-950C-433B-8B5E-122032641A2B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A6EDBC0D-950C-433B-8B5E-122032641A2B}.Debug|x86.Build.0 = Debug|Any CPU
-		{A6EDBC0D-950C-433B-8B5E-122032641A2B}.Release|x86.ActiveCfg = Release|Any CPU
-		{A6EDBC0D-950C-433B-8B5E-122032641A2B}.Release|x86.Build.0 = Release|Any CPU
+		{A2FFA7CF-867B-420F-B094-757418C3FD35}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A2FFA7CF-867B-420F-B094-757418C3FD35}.Debug|x86.Build.0 = Debug|Any CPU
+		{A2FFA7CF-867B-420F-B094-757418C3FD35}.Release|x86.ActiveCfg = Release|Any CPU
+		{A2FFA7CF-867B-420F-B094-757418C3FD35}.Release|x86.Build.0 = Release|Any CPU
+		{D187C52C-2374-44AE-8C13-01C8AA4120BD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D187C52C-2374-44AE-8C13-01C8AA4120BD}.Debug|x86.Build.0 = Debug|Any CPU
+		{D187C52C-2374-44AE-8C13-01C8AA4120BD}.Release|x86.ActiveCfg = Release|Any CPU
+		{D187C52C-2374-44AE-8C13-01C8AA4120BD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
