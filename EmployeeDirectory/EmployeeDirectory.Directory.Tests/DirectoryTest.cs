@@ -25,10 +25,9 @@ namespace EmployeeDirectory.Directory.Tests
         }
 
         [Test]
-        [ExpectedException(typeof(ArgumentNullException))]
         public void Add_GivenNull_ShouldThrowArgumentNullException()
         {
-            directory.Add(null);
+            Assert.Throws<ArgumentNullException>(() => directory.Add(null));
         }
 
         [Test]
@@ -52,10 +51,9 @@ namespace EmployeeDirectory.Directory.Tests
         }
 
         [Test]
-        [ExpectedException(typeof(ArgumentNullException))]
         public void GetBySearchParameter_GivenNull_ShouldThrowArgumentNullException()
         {
-            directory.GetBySearchParameter(null);
+            Assert.Throws<ArgumentNullException>(() => directory.GetBySearchParameter(null));
         }
 
         [Test]
