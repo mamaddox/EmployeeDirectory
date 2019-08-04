@@ -72,6 +72,7 @@
     <Content Include="components\Pagination\PaginationWrapper.js" />
     <Content Include="components\Pagination\Pagination.js" />
     <Content Include="components\Pagination\RowsPerPageDropdown.js" />
+    <Content Include="components\Form\Form.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -86,6 +87,7 @@
     <Folder Include="components\Table\" />
     <Folder Include="components\Modal\" />
     <Folder Include="components\Pagination\" />
+    <Folder Include="components\Form\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
