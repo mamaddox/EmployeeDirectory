@@ -10,7 +10,7 @@ namespace EmployeeDirectory.WebAPI.Controllers
         [HttpGet]
         public IHttpActionResult GetEmployeeEntityAttributes()
         {
-            return Json(new AttributeGetter<EmployeeEntity>());
+            return Get(new AttributeGetter<EmployeeEntity>());
         }
     }
 }
