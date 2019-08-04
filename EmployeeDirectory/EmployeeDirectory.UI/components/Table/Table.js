@@ -5,8 +5,11 @@
 			rowModalObj: {}
 		}
 	}
-	getVisibleFields = () => {
-		return this.props.attributes.Fields.filter(field => !this.props.attributes.HiddenFields.includes(field));
+    getVisibleFields = () => {
+        const attributes = this.props.attributes;
+        return attributes.Fields.filter(field => 
+            !attributes.HiddenFields.includes(field)
+        );
 	}
 
 	onRowClick = rowModalObj => {
@@ -41,8 +44,7 @@
 		    <Modal
 		    	attributes={this.props.attributes}
 		    	modalId={"RowModal"}
-		    	modalObj={this.state.rowModalObj}
-		    />
+		    	modalObj={this.state.rowModalObj} />
 			</React.Fragment>
 		);
 	}

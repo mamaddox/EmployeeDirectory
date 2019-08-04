@@ -7,10 +7,10 @@
 	}
 
 	componentDidMount() {
-		this.getFields();
+		this.getAttributes();
 	}
 
-	getFields = () => {
+	getAttributes = () => {
 		EmployeeAPI.getAttributes(this.setAttributes);
 	}
 
@@ -24,7 +24,8 @@
 				<div className="container text-center">
 					<h1>Employee Directory</h1>
 					{Object.keys(this.state.attributes).length !== 0 && 
-						<SearchForm
+                        <SearchForm
+                            constants={EmployeeDirectoryConstants}
 							attributes={this.state.attributes} 
 		        			getData={DirectoryAPI.getEmployees}
 		        			handleSearch={DirectoryAPI.getBySearchParameters}/>

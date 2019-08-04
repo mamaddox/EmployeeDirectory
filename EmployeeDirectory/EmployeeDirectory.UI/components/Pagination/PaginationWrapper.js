@@ -5,6 +5,7 @@
 				<div className="row">
 					<div className="col-sm">
 						<RowsPerPageDropdown
+                            constants={this.props.constants}
 							rowCount={this.props.rowCount}
 							updateRowCount={this.props.updateRowCount}/>
 				    </div>
@@ -13,7 +14,6 @@
 							currentPage={this.props.currentPage}
 							maxPage={this.props.maxPage}
 							rowCount={this.props.rowCount}
-							numberOfRows={this.props.numberOfRows}
 							updateCurrentPage={this.props.updateCurrentPage}/>
 					</div>
 				</div>

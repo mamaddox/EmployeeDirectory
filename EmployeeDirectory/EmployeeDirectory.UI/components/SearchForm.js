@@ -1,10 +1,10 @@
 ﻿class SearchForm extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			rows: [],
 			visibleRows: [],
-			rowCount: EmployeeDirectoryConstants.DefaultRowCount,
+			rowCount: this.props.constants.DefaultRowCount,
 			currentPage: 1,
 			numberOfRows: 0
 		};
@@ -26,7 +26,7 @@
 		const currentPage = this.state.currentPage;
 		const rowCount = this.state.rowCount;
 		const rows = this.state.rows;
-		let visibleRows = rows.slice(currentPage * rowCount - rowCount + 1, currentPage * rowCount + 1);
+		let visibleRows = rows.slice(currentPage * rowCount - rowCount, currentPage * rowCount + 1);
 		this.setState({visibleRows: visibleRows});
 	}
 
@@ -53,11 +53,11 @@
 						attributes={this.props.attributes}
 						rows={this.state.visibleRows} />
 				}
-				<PaginationWrapper 
+				<PaginationWrapper
+                    constants={this.props.constants}
 					rowCount={this.state.rowCount}
 					currentPage={this.state.currentPage}
 					maxPage={Math.ceil(this.state.numberOfRows / this.state.rowCount)}
-					numberOfRows={this.state.numberOfRows}
 					updateRowCount={this.updateRowCount}
 					updateCurrentPage={this.updateCurrentPage} />
 			</div>

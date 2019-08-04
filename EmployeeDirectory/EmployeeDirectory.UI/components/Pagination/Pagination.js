@@ -26,15 +26,19 @@
 		return (
 			<nav aria-label="...">
 				<ul className="pagination justify-content-end">
-					<li className={"page-item " + (this.props.currentPage === 1 ? "disabled" : "")} onClick={this.setPreviousPage}>
+                    <li className={"page-item " + (this.props.currentPage === 1 ? "disabled" : "")} 
+                        onClick={this.setPreviousPage}>
 						<span className="page-link">Previous</span>
 					</li>
 					{this.getPageNumbers().map((page, i) => {
-						return (<li className={"page-item " + (page === this.props.currentPage ? "active" : "")} key={i} onClick={() => this.setCurrentPage(page)}>
+						return (<li className={"page-item " + (page === this.props.currentPage ? "active" : "")} 
+                                    key={i} 
+                                    onClick={() => this.setCurrentPage(page)}>
 								<a className="page-link" href="#">{page}</a>
 							</li>);
 					})}
-					<li className={"page-item " + (this.props.maxPage === 1 ? "disabled" : "")} onClick={this.setNextPage}>
+					<li className={"page-item " + (this.props.maxPage === 1 ? "disabled" : "")} 
+                        onClick={this.setNextPage}>
 					  <a className="page-link" href="#">Next</a>
 					</li>
 				</ul>

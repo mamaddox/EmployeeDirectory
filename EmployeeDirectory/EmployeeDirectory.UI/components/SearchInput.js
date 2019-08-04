@@ -8,13 +8,11 @@
 	}
 
 	updateSearchInput = event => {
-		const inputValue = event.target.value;
-		this.setState({searchInput: inputValue});
+		this.setState({searchInput: event.target.value});
 	}
 
 	updateSearchDropdown = event => {
-		const inputValue = event.target.value;
-		this.setState({searchDropdown: inputValue});
+		this.setState({searchDropdown: event.target.value});
 	}
 
 	handleSearch = () => {
@@ -29,20 +27,29 @@
 	}
 
 	render() {
+        const attributes = this.props.attributes;
 		return (
 			<div className="input-group" style={{marginBottom: "25px"}}>
 				<div className="input-group-prepend">
-					<select className="btn btn-outline-secondary" onChange={this.updateSearchDropdown}>
+					<select className="btn btn-outline-secondary"
+                            onChange={this.updateSearchDropdown}>
 						<option value=""> </option>
-						{this.props.attributes.Fields.map((field, i) => {
-							if (!this.props.attributes.PictureFields.includes(field))
+						{attributes.Fields.map((field, i) => {
+							if (!attributes.PictureFields.includes(field))
 								return <option key={i}>{field}</option>
 						})}
 					</select>
 				</div>
-				<input type="text" className="form-control" placeholder="Enter Search Criteria..." onChange={this.updateSearchInput}/>
+				<input type="text" 
+                        className="form-control" 
+                        placeholder="Enter Search Criteria..." 
+                        onChange={this.updateSearchInput}/>
 				<div className="input-group-append">
-				  <button className="btn btn-outline-secondary" type="button" onClick={this.handleSearch}>Search</button>
+				    <button className="btn btn-outline-secondary" 
+                            type="button" 
+                            onClick={this.handleSearch}>
+                        Search
+                    </button>
 				</div>
 			</div>
 		);

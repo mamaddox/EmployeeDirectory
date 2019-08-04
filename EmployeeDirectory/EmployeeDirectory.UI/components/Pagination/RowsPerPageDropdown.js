@@ -1,5 +1,5 @@
 ﻿class RowsPerPageDropdown extends React.Component {
-	onChange = (event) => {
+	onChange = event => {
 		this.props.updateRowCount(event.target.value);
 	}
 
@@ -14,8 +14,8 @@
 						<select className="btn btn-outline-secondary" 
 							style={{height: "38px"}} 
 							onChange={this.onChange}
-							defaultValue={EmployeeDirectoryConstants.DefaultRowCount}>
-					    	{EmployeeDirectoryConstants.RowsPerPageOptions.map((option, i) => {
+							defaultValue={this.props.constants.DefaultRowCount}>
+					    	{this.props.constants.RowsPerPageOptions.map((option, i) => {
 					    		return (<option key={i}>{option}</option>);
 					    	})}
 						</select>

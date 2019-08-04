@@ -1,4 +1,4 @@
-﻿DirectoryAPI = {};
+﻿const DirectoryAPI = {};
 
 DirectoryAPI.getEmployees = function(callback) {
 	$.ajax({

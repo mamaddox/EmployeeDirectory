@@ -1,4 +1,4 @@
-﻿EmployeeAPI = {};
+﻿const EmployeeAPI = {};
 
 EmployeeAPI.getAttributes = function(callback) {
 	$.ajax({
