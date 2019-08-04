@@ -1,13 +1,14 @@
 # EmployeeDirectory
 
-This is a pretty standard Employee Search Directory.
+This is a pretty standard Employee Search Directory.\
+\
 Features include:
-	- Search Employees using Search Criteria
-	- Restrict Search to specific column specified by dropdown
-		- No dropdown selection means a search through all columns
-	- Change the number of results shown with Show Results dropdown
-	- Pagination to select page results you wish to see
-	- Click on a row to display Employee Info Modal
+- Search Employees using Search Criteria
+- Restrict Search to specific column specified by dropdown
+	- No dropdown selection means a search through all columns
+- Change the number of results shown with Show Results dropdown
+- Pagination to select page results you wish to see
+- Click on a row to display Employee Info Modal
 
 Random user data is being fetched from a Mockaroo API
 
