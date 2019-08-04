@@ -40,6 +40,7 @@
     <Compile Include="Attributes\AttributeGetter.cs" />
     <Compile Include="Attributes\FieldTypeAttribute.cs" />
     <Compile Include="SearchParameterEntity.cs" />
+    <Compile Include="ISearchParameterEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

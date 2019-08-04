@@ -30,6 +30,7 @@
     <Compile Include="Directory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IDirectory.cs" />
+    <Compile Include="DirectorySingleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EmployeeDirectory.Entities\EmployeeDirectory.Entities.csproj">

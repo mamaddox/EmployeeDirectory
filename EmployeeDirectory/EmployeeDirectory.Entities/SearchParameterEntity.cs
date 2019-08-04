@@ -2,12 +2,8 @@
 
 namespace EmployeeDirectory.Entities
 {
-    public class SearchParameterEntity
+    public class SearchParameterEntity : ISearchParameterEntity
     {
-        public SearchParameterEntity()
-        {
-        }
-
         public SearchParameterEntity(string field, string value)
         {
             Field = field;

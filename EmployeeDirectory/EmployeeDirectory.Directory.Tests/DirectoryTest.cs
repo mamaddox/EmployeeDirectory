@@ -20,7 +20,7 @@ namespace EmployeeDirectory.Directory.Tests
         [Test]
         public void GetAll_ShouldReturn50Employees()
         {
-            var employees = new Directory().GetAll().ToList();
+            var employees = DirectorySingleton.Instance.GetAll().ToList();
             Assert.AreEqual(50, employees.Count);
         }
 
@@ -53,27 +53,27 @@ namespace EmployeeDirectory.Directory.Tests
 
         [Test]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Search_GivenNull_ShouldThrowArgumentNullException()
+        public void GetBySearchParameter_GivenNull_ShouldThrowArgumentNullException()
         {
-            directory.Search(null);
+            directory.GetBySearchParameter(null);
         }
 
         [Test]
-        public void Search_GivenEntityWithAllFields_ShouldReturnFilteredResults()
+        public void GetBySearchParameter_GivenEntityWithEmptyFieldValue_ShouldReturnFilteredResults()
         {
             var searchParameter = new SearchParameterEntity("", "Tes");
 
-            var searchResults = directory.Search(searchParameter).ToList();
+            var searchResults = directory.GetBySearchParameter(searchParameter).ToList();
 
             Assert.AreEqual(4, searchResults.Count);
         }
 
         [Test]
-        public void Search_GivenEntityWithSpecificFields_ShouldReturnFilteredResults()
+        public void GetBySearchParameter_GivenEntityWithSpecificField_ShouldReturnFilteredResults()
         {
             var searchParameter = new SearchParameterEntity("Department", "Test");
 
-            var searchResults = directory.Search(searchParameter).ToList();
+            var searchResults = directory.GetBySearchParameter(searchParameter).ToList();
 
             Assert.AreEqual(3, searchResults.Count);
             Assert.True(searchResults.All(result => result.Department == "Test"));

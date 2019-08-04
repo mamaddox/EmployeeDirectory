@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using EmployeeDirectory.Data;
 using EmployeeDirectory.Entities;
 using Newtonsoft.Json;
 
@@ -12,7 +11,7 @@ namespace EmployeeDirectory.Directory
     {
         private readonly List<EmployeeEntity> employees;
 
-        public Directory() : this(DataLoader.GetEmployees())
+        protected Directory()
         {
         }
 
@@ -35,13 +34,13 @@ namespace EmployeeDirectory.Directory
             employees.Add(employee);
         }
 
-        public IEnumerable<EmployeeEntity> Search(SearchParameterEntity searchParameter)
+        public IEnumerable<EmployeeEntity> GetBySearchParameter(ISearchParameterEntity searchParameter)
         {
             if (searchParameter == null)
                 throw new ArgumentNullException();
 
             var field = searchParameter.Field;
-            var value = searchParameter.Value;
+            var value = searchParameter.Value.ToUpper();
 
             var results = new HashSet<EmployeeEntity>();
 
@@ -53,10 +52,12 @@ namespace EmployeeDirectory.Directory
                     if (field != "" && jsonPropertyName != field)
                         continue;
 
-                    if (prop.GetValue(employee) == null)
+                    var propValue = prop.GetValue(employee);
+
+                    if (propValue == null)
                         continue;
 
-                    if (prop.GetValue(employee).ToString().Contains(value))
+                    if (propValue.ToString().ToUpper().Contains(value))
                         results.Add(employee);
                 }
             }

@@ -7,7 +7,7 @@ namespace EmployeeDirectory.Directory
         where TEntity : IEntity
     {
         IEnumerable<TEntity> GetAll();
-        IEnumerable<TEntity> Search(SearchParameterEntity searchParameter);
+        IEnumerable<TEntity> GetBySearchParameter(ISearchParameterEntity searchParameter);
         void Add(TEntity entity);
     }
 }
